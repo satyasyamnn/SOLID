@@ -1,0 +1,18 @@
+﻿What functionalities Trade Processor is performing
+
+Reading --> Parsing --> Validating --> Writing to database
+
+TradeProcessor can change in following situation:
+
+1. Lets Say input but instead read the trades from a remote call to a web service.
+2. if format of data changes and a new filed is introduced
+3. A new rule for validation is introduced
+4. Change in the way telemetry is managed
+5. Changes to database model/stored procedure
+
+Smells:
+
+Design level smell: God Class 
+
+Code smell : Long Method --> This is fixed with refactoring, as long method is now broken to smaller methods and logic is encapsulated inside the smaller functions
+
